@@ -1,0 +1,82 @@
+# data/keywords/weather_keywords.txt
+# General Weather Conditions: 
+sunny
+cloudy
+overcast
+clear
+bright
+hazy
+foggy
+misty
+rainy
+wet
+dry
+nhumidmuggy
+windy
+stormy
+calm
+thunderous
+icy
+frosty
+#
+# Temperatures:
+hot
+warm
+mild
+cool
+cold
+freezing
+chilly
+scorching
+boiling
+arctic
+lukewarm
+#
+# Precipitation:
+rain
+drizzle
+downpour
+shower
+sprinkle
+torrential rain
+snow
+sleet
+hail
+graupel
+freezing rain
+snowfall
+blizzard
+#
+# Wind & Storms: 
+wind
+breeze
+gust
+storm
+gale
+hurricane
+tornado
+whirlwind
+cyclone
+typhoon
+light wind
+strong wind
+#
+# Special Weather Phenomena: 
+thunderstorm
+lightning
+thunder
+rainbow
+fog
+mist
+black ice
+snowdrift
+heat lightning
+sandstorm
+aurora
+#
+# Seasonal Weather: 
+spring-like
+summery
+autumnal
+wintery
+# ... weitere nach Bedarf
