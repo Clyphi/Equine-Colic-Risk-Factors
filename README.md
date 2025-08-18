@@ -15,7 +15,7 @@ python src/analysis/sentiment.py --data data/processed/cleaned.csv
 ```
 
 ## 📂 Project Structure
-| Ordner          | Inhalt                                      |
+| Ordner          | Inhalt                                     |
 |-----------------|--------------------------------------------|
 | `src/`          | Hauptcode (modular, getestet)              |
 | `data/processed`| Bereinigte Daten mit Sentiment-Labels      |
@@ -48,7 +48,7 @@ Bearbeite `data/keywords/colic_keywords.txt`:
    ```
 
 ## 📊 Beispiel-Output
-![Sentiment Analysis](outputs/plots/sentiment_by_month.png)
+![Sentiment Analysis](images/analyzed_posts.png)
 
 ## 🧠 Word Embeddings (SkipGram)
    Zusätzlich zur Sentiment-Analyse enthält das Projekt ein SkipGram-Neuronales Netz, das Wort-Embeddings für Kolik- und Wetterdiskussionen aus Reddit generiert.
