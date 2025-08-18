@@ -50,6 +50,32 @@ Bearbeite `data/keywords/colic_keywords.txt`:
 ## 📊 Beispiel-Output
 ![Sentiment Analysis](outputs/plots/sentiment_by_month.png)
 
+## 🧠 Word Embeddings (SkipGram)
+   Zusätzlich zur Sentiment-Analyse enthält das Projekt ein SkipGram-Neuronales Netz, das Wort-Embeddings für Kolik- und Wetterdiskussionen aus Reddit generiert.
+
+### Features
+   - SkipGram mit **Negative Sampling**  
+   - Optimizer: **Adam**, Embedding-Dimension: **100**  
+   - Kontextpaare basierend auf Keywords aus `data/keywords/`  
+   - Beispielausgabe: Embedding für das Wort *rain*  
+
+### Ausführung
+ ```bash
+   # Training starten
+   python src/models/skipgram_nn.py
+   ```
+
+### Beispielausgabe
+```text
+Anzahl Skipgram-Pairs: 13666
+Epoch 1/10, Loss: ...
+...
+Embedding für 'rain': [[0.25, 1.13, ...]]
+```
+
+### Ziel
+Die erzeugten Embeddings helfen, Zusammenhänge zwischen Kolik-Risikofaktoren und Wetterbedingungen in Textdiskussionen zu erkennen.
+
 ## 🛠 Dev Tools
 - **Logging**: Zentral in `src/utils/logger.py`  
 - **Testing**: Pytest für alle Module (`tests/`)  
