@@ -45,18 +45,18 @@ def analyze_posts(df):
         df: DataFrame mit Reddit-Posts
         
     Returns:
-        DataFrame mit analysierten Kolik-relevanten Posts und Sentiment-Scores
+        DataFrame mit Kolik-Label (is_colic) und optional Sentiment-Scores
     """
     # Kolik-Erkennung
     df['is_colic'] = df['full_text'].apply(is_colic_related)
-    colic_posts = df[df['is_colic']].copy()
-    
-    # Sentiment-Analyse
+
+    # Sentiment nur für kolik-relevante Posts (optional für alle machbar)
     sia = SentimentIntensityAnalyzer()
-    colic_posts['sentiment'] = colic_posts['full_text'].apply(
-        lambda x: sia.polarity_scores(x)['compound']
+    df['sentiment'] = df['full_text'].apply(
+        lambda x: sia.polarity_scores(x)['compound'] if is_colic_related(x) else None
     )
-    return colic_posts
+
+    return df
 
 
 if __name__ == "__main__":
