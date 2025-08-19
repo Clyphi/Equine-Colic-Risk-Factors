@@ -4,19 +4,32 @@
 Project: Equine-Colic-Risk-Factors
 File: reddit_colic_posts
 Author: Claudia Leins
-Description: Sentiment analysis
+Description: Reddit colic posts dataset
+Dataset of Reddit posts mentioning 'colic' in r/Horses, 
+intended for analysis of contributing factors like weather,
+season, and stable conditions."
 """
 import praw
+import pandas as pd
+import os
+from dotenv import load_dotenv
+
+# .env laden
+load_dotenv()
 
 reddit = praw.Reddit(
-    client_id="oRwML2Tj49IgK29x9YPwjg",
-    client_secret="JlaZCFFNvXcPy3jzhcshV8jfajm9cQ",
-    user_agent="EquineColicResearch/1.0"
+    client_id=os.getenv("REDDIT_ID"),
+    client_secret=os.getenv("REDDIT_SECRET"),
+    user_agent=os.getenv("REDDIT_USER_AGENT")
 )
 
 posts = []
-for submission in reddit.subreddit("Horses").search("colic", limit=1000):
-    posts.append({"title": submission.title, "text": submission.selftext, "date": submission.created_utc})
+for submission in reddit.subreddit("Horses").search("colic", limit=None):
+    posts.append({
+        "title": submission.title,
+        "text": submission.selftext,
+        "date": pd.to_datetime(submission.created_utc, unit='s')
+    })
 
 # Als CSV speichern
 import pandas as pd
