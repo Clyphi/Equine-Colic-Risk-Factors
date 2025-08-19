@@ -15,11 +15,14 @@ python src/analysis/sentiment.py --data data/processed/cleaned.csv
 ```
 
 ## 📂 Project Structure
-| Ordner          | Inhalt                                     |
-|-----------------|--------------------------------------------|
-| `src/`          | Hauptcode (modular, getestet)              |
-| `data/processed`| Bereinigte Daten mit Sentiment-Labels      |
-| `outputs/plots` | Automatisch generierte Visualisierungen    |
+| Ordner              | Inhalt                                        |
+|---------------------|-----------------------------------------------|
+| `src/`              | Hauptcode (modular, getestet)                 |
+| `src/analysis`	    | Analyse-Skripte (Feature Detection, Sentiment)|
+| `src/visualization` | Visualisierung von Features und Plots.        |
+| `data/processed`.   | Bereinigte Daten mit Sentiment-Labels         |
+| `outputs/plots`     | Automatisch generierte Visualisierungen       |
+|---------------------------------------------------------------------|
 
 ## 🔍 Kernfunktionen
 1. **Keywords anpassen**
@@ -41,7 +44,20 @@ Bearbeite `data/keywords/colic_keywords.txt`:
    df["sentiment"] = df["text"].apply(analyze_sentiment)
    ```
 
-4. **Kommandozeilen-Tools**  
+4. **Feature Detection & Visualisierung**
+   Chi² + logistische Regression für signifikante Features
+   Grafische Darstellung der Top Features:
+   ```python
+   from src.analysis.feature_detector import ColicFeatureDetector
+   from src.visualization.plot_features import FeatureVisualizer
+
+   detector = ColicFeatureDetector(n_features=500)
+   detector.fit(df["text"], df["is_colic"])
+   top_features = detector.get_top_features(15)
+   FeatureVisualizer.plot_feature_scores(top_features, top_n=15, output_path="outputs/plots/top_features.png")
+   ```
+
+5. **Kommandozeilen-Tools**  
    - Skripte laufen mit `--help` für Parameter-Dokumentation:
    ```bash
    python src/visualization/plot_sentiment.py --help
