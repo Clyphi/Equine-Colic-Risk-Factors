@@ -79,4 +79,11 @@ spring-like
 summery
 autumnal
 wintery
+
+# Seasons
+winter
+summer
+weather
+spring
+autumn
 # ... weitere nach Bedarf

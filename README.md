@@ -1,102 +1,134 @@
-# 🐴 Equine Colic Risk Factors - Python Edition
+# 🐴 Equine Colic Risk Factors (Version 2)
 
-**Pure Python pipeline to analyze horse colic discussions from Reddit.**
+Dieses Projekt untersucht Risikofaktoren für Koliken bei Pferden anhand
+von Reddit-Daten aus dem Subreddit **r/Horses**.\
+Die Daten werden gesammelt, bereinigt, in einer SQLite-Datenbank
+gespeichert und anschließend statistisch und mit Machine Learning
+analysiert.
 
-## 🚀 Quick Start
-```bash
-# Installation
+------------------------------------------------------------------------
+
+## 📂 Projektstruktur
+
+``` plaintext
+Equine-Colic-Risk-Factors/
+│
+├── data/
+│   ├── raw/                  # unbearbeitete Daten (Scraping)
+│   ├── processed/            # bereinigte Daten für DB-Import
+│   └── outputs/              # Plots, Analyseergebnisse, ML-Modelle
+│
+├── src/
+│   ├── collection/           # Datenbeschaffung
+│   ├── preprocessing/        # Datenbereinigung, Feature-Engineering
+│   ├── database/             # DB-Schema & Import
+│   ├── analysis/             # Statistik & erste Auswertungen
+|   ├── utils   /             # Statistik & erste Auswertungen
+│   └── ml/                   # Hilfsprogramme 
+│       └── ml_experiments.py # Erste ML-Experimente
+│
+├── .env                      # Reddit API Keys (nicht ins Repo)
+├── requirements.txt          # Python Abhängigkeiten
+└── README.md                 # Diese Datei (Version 2)
+```
+
+------------------------------------------------------------------------
+
+## ⚙️ Installation
+
+``` bash
+git clone https://github.com/Clyphi/Equine-Colic-Risk-Factors.git
+cd Equine-Colic-Risk-Factors
 pip install -r requirements.txt
-
-# Datenbereinigung
-python src/preprocessing/clean_text.py --input data/raw/reddit_posts.csv
-
-# Sentiment-Analyse
-python src/analysis/sentiment.py --data data/processed/cleaned.csv
 ```
 
-## 📂 Project Structure
-| Ordner              | Inhalt                                        |
-|---------------------|-----------------------------------------------|
-| `src/`              | Hauptcode (modular, getestet)                 |
-| `src/analysis`	    | Analyse-Skripte (Feature Detection, Sentiment)|
-| `src/visualization` | Visualisierung von Features und Plots.        |
-| `data/processed`.   | Bereinigte Daten mit Sentiment-Labels         |
-| `outputs/plots`     | Automatisch generierte Visualisierungen       |
-|---------------------------------------------------------------------|
+------------------------------------------------------------------------
 
-## 🔍 Kernfunktionen
-1. **Keywords anpassen**
-Bearbeite `data/keywords/colic_keywords.txt`:
-- Ein Begriff pro Zeile
-- Kommentare mit `#` ignorieren
+## 🚀 Nutzung
 
-2. **Keyword-Filterung**  
-   - Identifiziere Kolik-relevante Posts mit veterinärmedizinischen Begriffen.
-   ```python
-   from src.preprocessing.filter_keywords import is_colic_related
-   df["is_colic"] = df["text"].apply(is_colic_related)
-   ```
+# Option 1: (Scraping von Reddit)
 
-3. **Sentiment-Analyse**  
-   - Nutzt angepasstes VADER-Lexikon für Pferdebesitzer-Jargon.
-   ```python
-   from src.analysis.sentiment import analyze_sentiment
-   df["sentiment"] = df["text"].apply(analyze_sentiment)
-   ```
+1.  **Daten sammeln**
 
-4. **Feature Detection & Visualisierung**
-   Chi² + logistische Regression für signifikante Features
-   Grafische Darstellung der Top Features:
-   ```python
-   from src.analysis.feature_detector import ColicFeatureDetector
-   from src.visualization.plot_features import FeatureVisualizer
+    ``` bash
+    python src/collection/reddit_colic_posts.py
+    ```
 
-   detector = ColicFeatureDetector(n_features=500)
-   detector.fit(df["text"], df["is_colic"])
-   top_features = detector.get_top_features(15)
-   FeatureVisualizer.plot_feature_scores(top_features, top_n=15, output_path="outputs/plots/top_features.png")
-   ```
+2.  **Datenbank erstellen**
 
-5. **Kommandozeilen-Tools**  
-   - Skripte laufen mit `--help` für Parameter-Dokumentation:
-   ```bash
-   python src/visualization/plot_sentiment.py --help
-   ```
+    ``` bash
+    python src/database/create_db.py
 
-## 📊 Beispiel-Output
-![Sentiment Analysis](images/analyzed_posts.png)
+    
 
-## 🧠 Word Embeddings (SkipGram)
-   Zusätzlich zur Sentiment-Analyse enthält das Projekt ein SkipGram-Neuronales Netz, das Wort-Embeddings für Kolik- und Wetterdiskussionen aus Reddit generiert.
+3.    **Daten bereinigen und in die Datenbank importieren**
 
-### Features
-   - SkipGram mit **Negative Sampling**  
-   - Optimizer: **Adam**, Embedding-Dimension: **100**  
-   - Kontextpaare basierend auf Keywords aus `data/keywords/`  
-   - Beispielausgabe: Embedding für das Wort *rain*  
+    ``` bash
+    python src/database/reddit_pipeline.py
+    ```
 
-### Ausführung
- ```bash
-   # Training starten
-   python src/models/skipgram_nn.py
-   ```
+4.  **Analysen durchführen**
 
-### Beispielausgabe
-```text
-Anzahl Skipgram-Pairs: 13666
-Epoch 1/10, Loss: ...
-...
-Embedding für 'rain': [[0.25, 1.13, ...]]
-```
+    ``` bash
+    python src/analysis/analyze_reddit.py
+    ```
 
-### Ziel
-Die erzeugten Embeddings helfen, Zusammenhänge zwischen Kolik-Risikofaktoren und Wetterbedingungen in Textdiskussionen zu erkennen.
+5.  **Machine Learning (zukünftig)**
 
-## 🛠 Dev Tools
-- **Logging**: Zentral in `src/utils/logger.py`  
-- **Testing**: Pytest für alle Module (`tests/`)  
-- **CI/CD**: GitHub Actions für automatisiertes Testing  
+    ``` bash
+    python src/ml/ml_experiments.py
+    ```
 
-## 🤝 Mitwirken
-- **Issues**: Melde fehlende Schlüsselwörter in `data/keywords/`  
-- **Datenlabeling**: Hilf beim Erweitern der Sentiment-Labels (`docs/labeling_guide.md`)
+# Option 2: (Synthetische Daten erstellen)
+
+1.  **Datenbank erstellen**
+
+    ``` bash
+    python src/database/create_db.py
+
+2.    **Synthetische Daten erstellen, reale Wetterdaten hinzufügen und in die Datenbank importieren**
+
+    ``` bash
+    python src/database/synthetic_data_pipeline.py
+    ```
+
+3.  **Analysen durchführen**
+
+    ``` bash
+    python src/analysis/analyze_data_from_db.py
+    ```
+
+4.  **Machine Learning (zukünftig)**
+
+    ``` bash
+    python src/ml/ml_experiments.py
+    ```
+------------------------------------------------------------------------
+
+## 📊 Analysen
+
+-   Deskriptive Statistik: Häufigkeit & Varianz von Risikofaktoren\
+-   Zusammenhangsanalyse: Statistische Tests zwischen Faktoren und
+    Kolik-Hinweisen\
+-   Visualisierungen: Zeitreihen, Histogramme, Korrelationen
+
+------------------------------------------------------------------------
+
+## 🔮 Geplante Erweiterungen
+
+-   **Machine Learning Modelle**:
+    -   `src/ml/ml_experiments.py` für erste Tests (z. B. Logistic
+        Regression, Random Forest).\
+    -   Später Aufteilung in Trainings-, Validierungs- und Testsets.\
+-   **Zeitreihenanalyse**: Untersuchung saisonaler Muster (z. B. Wetter,
+    Futterwechsel).\
+-   **Netzwerkanalyse**: Beziehungen zwischen Risikofaktoren.\
+-   **Deployment**: Interaktives Dashboard (Flask/Streamlit).
+
+------------------------------------------------------------------------
+
+## 👩‍💻 Autor
+
+Claudia Leins\
+Projekt *Equine Colic Risk Factors*
+

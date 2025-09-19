@@ -1,16 +1,27 @@
 # data/keywords/colic_keywords.txt
-colic
-kolik
-abdominal pain
-vet emergency
+# Englisch:
 not eating
+gut pain
+flank tension
+kicking at belly
+lying down frequently
+gas buildup
+twisted intestine
+bowel stragulation
+gastric torsion
+hospitalsurgery
+colic
+abdominal pain
+veterinary emergency
+anorexia
+inappetence
 rolling
 bloating
-fever
+tympany
 constipation
-futterverweigerung
-schmerzen
-gut pain
+obstipation
+pain
+abdominal discomfort
 intestinal blockage
 bowel obstruction
 colic pain
@@ -18,102 +29,137 @@ pawing
 sweating
 restlessness
 loss of appetite
-flank tension
-kicking at belly
-lying down frequently
+flank watching
+kicking at abdomen
+frequent lying down
 thrashing
-gas buildup
-twisted intestine
+gas accumulation
+intestinal volvulus
 intestinal torsion
-bowel stragulation
-ileus
+bowel strangulation
 adhesions
 enteritis
-gastric torsion
+gastric dilatation-volvulus (GDV)
 colic surgery
-survived
+survival
 recovery
-death
+abdominal cavity
+intestinal motility
+intussusception
+volvulus
+ischemia
+laparotomy
+intestinal resection
+anastomosis
+endotoxemia
+shock
+dehydration
+hypermotility
+hypomotility
+ileus
+pain management
+fluid therapy
+nasogastric intubation
+feces passage
+borborygmi
+auscultation
+rectal palpation
+ultrasonography
+radiography
+complete blood count (CBC)
+lactate
+inflammatory markers
+prognosis
+euthanasia
+anesthesia
+complications
+postoperative care
+critical care
+analgesics
+antibiotics
+anti-inflammatories
+paralytic ileus
+peritonitis
+sepsis
+multisystem organ failure
 #
-# weather keywords
-# General Weather Conditions: 
-sunny
-cloudy
-overcast
-clear
-bright
-hazy
-foggy
-misty
-rainy
-wet
-dry
-nhumidmuggy
-windy
-stormy
-calm
-thunderous
-icy
-frosty
+# Deutsch:
+futterverweigerung
+Kolik
+Abdominalschmerzen
+veterinärmedizinischer Notfall
+Anorexie
+Inappetenz
+Wälzen
+Aufgasung
+Tympanie
+Fieber
+Verstopfung
+Obstipation
+Schmerzen
+Abdominalbeschwerden
+Darmverschluss
+Darmobstruktion
+Kolikschmerz
+Scharren
+Schwitzen
+Unruhe
+Appetitlosigkeit
+Flankenbeobachten
+nach dem Bauch schlagen
+häufiges Niederlegen
+Umherschlagen
+Gasansammlung
+Darmvolvulus
+Darmtorsion
+Darmstrangulation
+Adhäsionen
+Darmentzündung
+Magendrehung
+Kolikchirurgie
+Überleben
+Erholung
+Sterblichkeit
+Tierarzt
+Klinikchirurgie
+Bauchhöhle
+Darmmotilität
+Intussuszeption
+Volvulus
+Ischämie
+Laparotomie
+Darmresektion
+Anastomose
+Endotoxämie
+Schock
+Dehydratation
+Hypermotilität
+Hypomotilität
+Ileus
+Schmerztherapie
+Flüssigkeitstherapie
+nasogastrale Intubation
+Kotabsatz
+Darmgeräusche
+Auskultation
+Rektaluntersuchung
+Ultraschall
+Röntgen
+Blutbild
+Laktat
+Entzündungsparameter
+Prognose
+Euthanasie
+Narkose
+Komplikationen
+postoperative Versorgung
+Intensivmedizin
+Schmerzmittel
+Antibiotika
+entzündungshemmende Mittel
+Darmlähmung
+Bauchfellentzündung
+Sepsis
+multisystemisches Organversagen
 #
-# Temperatures:
-hot
-warm
-mild
-cool
-cold
-freezing
-chilly
-scorching
-boiling
-arctic
-lukewarm
-#
-# Precipitation:
-rain
-drizzle
-downpour
-shower
-sprinkle
-torrential rain
-snow
-sleet
-hail
-graupel
-freezing rain
-snowfall
-blizzard
-#
-# Wind & Storms: 
-wind
-breeze
-gust
-storm
-gale
-hurricane
-tornado
-whirlwind
-cyclone
-typhoon
-light wind
-strong wind
-#
-# Special Weather Phenomena: 
-thunderstorm
-lightning
-thunder
-rainbow
-fog
-mist
-black ice
-snowdrift
-heat lightning
-sandstorm
-aurora
-#
-# Seasonal Weather: 
-spring-like
-summery
-autumnal
-wintery
 # ... weitere nach Bedarf

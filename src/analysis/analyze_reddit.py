@@ -4,68 +4,59 @@
 Project: Equine-Colic-Risk-Factors
 File: analyze_reddit
 Author: Claudia Leins
-Description: Sentiment analysis of Reddit posts for colic-related content
+Description: Perform risk factor analysis of Reddit posts about equine colic,
+             using preprocessed data from the SQLite database.
 """
 
+from pathlib import Path
 import sys
 import pandas as pd
-from pathlib import Path
-import nltk
 
-# NLTK Ressourcen sicherstellen
-try:
-    nltk.data.find('sentiment/vader_lexicon')
-except LookupError:
-    nltk.download('vader_lexicon')
-
-# Projektpfade konfigurieren
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent  # 3x parent, um aus src/analysis/ zum Root zu gelangen
+# Set project root
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.preprocessing.filter_keywords import is_colic_related
-from nltk.sentiment import SentimentIntensityAnalyzer
-
-# Pfade zu Ein- und Ausgabedateien
-CSV_PATH = PROJECT_ROOT / "data" / "raw" / "reddit_colic_posts.csv"
-OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "analyzed_posts.csv"
-
-
-def load_data():
-    """Lädt Reddit-Daten und kombiniert Titel und Text zu einer Spalte."""
-    df = pd.read_csv(CSV_PATH)
-    df['full_text'] = df['title'].fillna('') + " " + df['text'].fillna('')
-    return df
-
-
-def analyze_posts(df):
-    """
-    Führt Kolik-Erkennung und Sentiment-Analyse durch.
-    
-    Args:
-        df: DataFrame mit Reddit-Posts
-        
-    Returns:
-        DataFrame mit Kolik-Label (is_colic) und optional Sentiment-Scores
-    """
-    # Kolik-Erkennung
-    df['is_colic'] = df['full_text'].apply(is_colic_related)
-
-    # Sentiment nur für kolik-relevante Posts (optional für alle machbar)
-    sia = SentimentIntensityAnalyzer()
-    df['sentiment'] = df['full_text'].apply(
-        lambda x: sia.polarity_scores(x)['compound'] if is_colic_related(x) else None
-    )
-
-    return df
-
+# Import internal modules
+from src.analysis.risk_analysis import RiskFactorAnalyzer
+from src.visualization.visualizer import FeatureVisualizer
+from src.analysis.reddit_loader import RedditDataLoader
 
 if __name__ == "__main__":
-    print("⏳ Lade Daten...")
-    data = load_data()
-    
-    print("🔍 Analysiere Posts...")
-    analyzed = analyze_posts(data)
-    
-    analyzed.to_csv(OUTPUT_PATH, index=False)
-    print(f"✅ Ergebnisse gespeichert unter: {OUTPUT_PATH}")
-    print(f"📊 Gefundene Kolik-Posts: {len(analyzed)}/{len(data)}")
+    # --- Load data from database ---
+    print("📥 Loading data from database...")
+    loader = RedditDataLoader()
+    df = loader.load_data_from_db()
+
+    if df.empty:
+        print("⚠️ No data found in database. Please run reddit_pipeline.py first.")
+        sys.exit(1)
+
+    # --- Risk factor analysis ---
+    print("🔍 Analyzing risk factors...")
+    risk_analyzer = RiskFactorAnalyzer()
+    risk_results, analyzed_df = risk_analyzer.analyze_risk_factors(df)
+    risk_stats = risk_analyzer.calculate_risk_statistics(risk_results)
+
+    # --- Save analyzed results ---
+    output_path = PROJECT_ROOT / "data" / "processed" / "analyzed_posts.csv"
+    analyzed_df.to_csv(output_path, index=False)
+    print(f"✅ Results saved to: {output_path}")
+
+    # --- Print statistics ---
+    print("\n📊 RISK FACTOR STATISTICS:")
+    print(f"Total posts: {risk_results['total_posts']}")
+    print(f"Colic-related posts: {risk_results['total_colic_posts']}")
+    for factor, data in risk_stats.items():
+        print(f"{data['description']}: {data['count']} posts ({data['percentage']:.1f}%)")
+
+    # --- Visualization ---
+    output_dir = PROJECT_ROOT / "outputs" / "plots"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    FeatureVisualizer.plot_risk_factors(
+        risk_stats,
+        output_path=output_dir / "risk_factors_distribution.png",
+        title="Frequency of Risk Factors in Colic-Related Posts"
+    )
+
+    print("🎉 Risk factor analysis complete!")

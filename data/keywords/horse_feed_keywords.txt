@@ -1,0 +1,59 @@
+# HORSE FEED  COMPREHENSIVE LIST
+# FORAGE (The Foundation)
+# HORSE FEED  COMPREHENSIVE LIST
+
+# 1. FORAGE
+# The Foundation
+hay
+timothy Hay
+orchard Grass Hay
+bermuda Grass Hay
+alfalfa HayLucerne
+Meadow Hay
+Haylage
+Silage
+Fresh Grass
+Straw
+
+# 2. CONCENTRATES (Hard Feed)
+Oats
+Barley
+Corn 
+Maize
+Commercial Mixes 
+Muesli
+Pellets
+Grass Pellets
+Alfalfa Pellets 
+Lucerne Pellets
+Complete Feed Pellets
+
+# 3. SUPPLEMENTS
+Vitamin and Mineral Supplements
+Salt
+Electrolytes
+Joint Supplements
+Glucosamine
+Oil
+Linseed Oil 
+Flaxseed Oil
+Corn Oil
+Coconut Oil
+Probiotics
+
+# 4. FRUITS & VEGETABLES Treats in moderation)
+Apples
+Carrots
+Pears
+Bananas
+Celery
+Turnips
+Beetroot
+Pumpkin
+Watermelon
+
+# 5. COMMERCIAL TREATS
+Peppermints
+Sugar Cubes
+Dried Fruits
+

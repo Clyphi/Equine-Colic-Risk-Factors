@@ -22,3 +22,9 @@ black==23.9.0  # Code Formatter
 # Utilities
 python-dotenv==1.0.0  # Für .env Files (falls benötigt)
 tqdm==4.66.1  # Fortschrittsbalken
+wordcloud==1.9.4
+
+# Database
+Flask==2.3.5
+Flask-SQLAlchemy==3.0.5
+SQLAlchemy==2.0.20
