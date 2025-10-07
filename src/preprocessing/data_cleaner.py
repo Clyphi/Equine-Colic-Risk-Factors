@@ -17,7 +17,7 @@ from datetime import datetime
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from analysis.keyword_manager import KeywordManager
+from src.utils.keyword_manager import KeywordManager
 
 class DataCleaner:
     def __init__(self, df, colic_keywords_path, weather_keywords_path, feed_keywords_path):

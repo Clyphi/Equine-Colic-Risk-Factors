@@ -22,7 +22,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.preprocessing.data_cleaner import DataCleaner
 from src.database.load_to_db import DatabaseLoader
 from src.collection.reddit_colic_posts import RedditFetcher
-from src.analysis.keyword_manager import KeywordManager
+from src.utils.keyword_manager import KeywordManager
 
 # Rohdaten sammeln
 # Keys aus .env

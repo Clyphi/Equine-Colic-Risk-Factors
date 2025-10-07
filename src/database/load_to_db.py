@@ -163,6 +163,7 @@ class DatabaseLoader:
                     full_text="",  # Da full_text in synthetischen Daten nicht vorhanden ist
                     date=pd.to_datetime(row.get("date")) if pd.notna(row.get("date")) else None,
                     location=row.get("location", ""),
+                    breed=row.get("breed", ""),
                     horse_age=row.get("horse_age", ""),
                     horse_gender=row.get("horse_gender", ""),
                     colic_keywords=", ".join(sorted(found_keywords)),
@@ -174,7 +175,8 @@ class DatabaseLoader:
                     longitude=row.get("longitude", None),
                     weather_tmax=row.get("weather_tmax", None),
                     weather_tmin=row.get("weather_tmin", None),
-                    weather_precip=row.get("weather_precip", None)
+                    weather_precip=row.get("weather_precip", None),
+                    horse_keeping=row.get("horse_keeping", None)
                 )
                 db.session.add(task)
                 inserted += 1

@@ -26,6 +26,26 @@ class SyntheticDataGenerator:
         self.colic_types = ['spasmodic', 'impaction', 'gas', 'sand', 'displacement', 'torsion']
         self.locations = ['Berlin', 'Hamburg', 'Munich', 'Cologne', 'Frankfurt', 
                          'Stuttgart', 'Dresden', 'Hanover', 'Leipzig', 'Nuremberg']
+        self.horse_keeping =['stable','pasture','paddock']
+        self.breed = ['Lipizzaner',
+                      'Holsteiner',
+                      'Württemberger',
+                      'Arabisches Vollblut',
+                      'Englische Vollblüter',
+                      'American Quarter Horse',
+                      'Paint Horse',
+                      'Friese',
+                      'Andalusier',
+                      'Appaloosa',
+                      'Hannoveraner',
+                      'Oldenburger',
+                      'Westfale',
+                      'Trakehner',
+                      'Shetlandpony',
+                      'Haflinger',
+                      'Deutsches Reitpony',
+                      'Welsh Pony',
+                      'Islandpferd']
         
         # Wahrscheinlichkeiten für verschiedene Koliktypen
         self.colic_probabilities = {
@@ -36,7 +56,19 @@ class SyntheticDataGenerator:
             'displacement': 0.20,
             'torsion': 0.10
         }
+        
+        # Wahrscheinlichkeiten für verschiedene Futterarten
+        self.feed_probabilities = {
+            'hay': 0.3,
+            'haylage': 0.20,
+            'silage': 0.15,
+            'fresh grass': 0.10,
+            'straw': 0.20,
+            'corn': 0.10,
+            'pellets': 0.20
+        }
     
+        
     def generate_data(self):
         """Generate synthetic data with colic cases"""
         data = []
@@ -54,10 +86,21 @@ class SyntheticDataGenerator:
             has_colic = random.random() < colic_chance
             
             # Pferde-Alter und Geschlecht
+            breed = random.choice(self.breed)
             age = random.randint(1, 30)
             gender = random.choice(self.genders)
             location = random.choice(self.locations)
-            
+            horse_keeping = random.choice(self.horse_keeping)
+            # 1-2 Futterarten pro Fall
+            num_types = random.choices([1, 2], weights=[0.7, 0.3])[0]
+            feed_keywords = random.choices(
+                list(self.feed_probabilities.keys()),
+                weights=list(self.feed_probabilities.values()),
+                k=num_types
+            )
+            # Duplikate entfernen und sortieren
+            feed_keywords = sorted(set(feed_keywords))
+                
             # Kolik-Keywords generieren
             if has_colic:
                 # 1-2 Koliktypen pro Fall
@@ -77,18 +120,20 @@ class SyntheticDataGenerator:
                 "full_text": "",
                 'date': date.strftime('%Y-%m-%d'),
                 'location': location,
+                'breed': breed,
                 'horse_age': age,
                 'horse_gender': gender,
                 'colic_keywords': ', '.join(colic_keywords),
                 'weather_keywords': None,
-                'feed_keywords': None,
+                'feed_keywords': ', '.join(feed_keywords),
                 'weather_count': 0,
-                'feed_count': 0,
-                'latitude':None,
-                'longitude':None,
-                'weather_tmax':None,
-                'weather_tmin' :None,
-                'weather_precip' :None
+                'feed_count': len(feed_keywords) if feed_keywords else 0,
+                'latitude': None,
+                'longitude': None,
+                'weather_tmax': None,
+                'weather_tmin': None,
+                'weather_precip': None,
+                'horse_keeping': horse_keeping
             })
         
         return pd.DataFrame(data)

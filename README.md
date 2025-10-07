@@ -35,11 +35,33 @@ Equine-Colic-Risk-Factors/
 ------------------------------------------------------------------------
 
 ## ⚙️ Installation
+### 1. Python 3.11 installieren (falls noch nicht vorhanden)
 
+Mit Homebrew + pyenv (empfohlen):
+
+```bash
+brew install pyenv
+pyenv install 3.11.8
+pyenv global 3.11.8
+
+🔹 Projektsetup
 ``` bash
+# Repository klonen
 git clone https://github.com/Clyphi/Equine-Colic-Risk-Factors.git
 cd Equine-Colic-Risk-Factors
+
+# Virtuelle Umgebung erstellen und aktivieren
+python3 -m venv .venv
+source .venv/bin/activate
+
+# pip aktualisieren
+pip install --upgrade pip
+
+# Requirements installieren 
 pip install -r requirements.txt
+
+# Testen
+python -c "import pandas, numpy, torch, matplotlib, seaborn; print('Alle Kernpakete OK!')"
 ```
 
 ------------------------------------------------------------------------

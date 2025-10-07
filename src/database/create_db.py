@@ -41,6 +41,7 @@ class Task(db.Model):
     full_text = db.Column(db.Text, nullable=True)
     date = db.Column(db.Date, nullable=True)
     location = db.Column(db.Text, nullable=True)
+    breed = db.Column(db.String(120), nullable=True)
     horse_age = db.Column(db.Integer, nullable=True)
     horse_gender = db.Column(db.String(10), nullable=True)
     colic_keywords = db.Column(db.Text, nullable=True)
@@ -54,6 +55,7 @@ class Task(db.Model):
     weather_tmax = db.Column(db.Float)
     weather_tmin = db.Column(db.Float)
     weather_precip = db.Column(db.Float)
+    horse_keeping = db.Column(db.String(10), nullable=True) # stable, pasture, paddock
     
     def to_dict(self):
         return {
@@ -62,6 +64,7 @@ class Task(db.Model):
             "full_text": self.full_text,
             "date": self.date.isoformat() if self.date else None,
             "location": self.location,
+            "breed": self.breed,
             "horse_age": self.horse_age,
             "horse_gender": self.horse_gender,
             "colic_keywords": self.colic_keywords,
@@ -73,7 +76,8 @@ class Task(db.Model):
             "longitude": self.longitude,
             "weather_tmax": self.weather_tmax,
             "weather_tmin": self.weather_tmin,
-            "weather_precip": self.weather_precip
+            "weather_precip": self.weather_precip,
+            "horse_keeping": self.horse_keeping
         }
 
     def __repr__(self):

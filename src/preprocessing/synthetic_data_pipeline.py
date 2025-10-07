@@ -32,4 +32,4 @@ if __name__ == '__main__':
     print("Starte WeatherManager...")
     wm = WeatherManager()
     print("Rufe bulk_update_missing auf...")
-    wm.bulk_update_missing()
+    wm.bulk_update_missing() 
