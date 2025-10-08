@@ -20,13 +20,17 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.statistics.risk_factor_analysis import RiskFactorAnalyzer
 from src.visualization.visualizer import FeatureVisualizer
 from src.database.data_loader import SyntheticDataLoader
+from src.models.colic_classifier import ColicClassifier
+from src.models.colic_nn import ColicNN
+
 
 if __name__ == "__main__":
     # --- Load Reddit processed data from database ---
     print("📥 Loading data from database...")
     loader = SyntheticDataLoader()
     df = loader.load_data_from_db()
-
+    
+    
     if df.empty:
         print("⚠️ No data found in database. Please run reddit_pipeline.py first.")
         sys.exit(1)
@@ -92,7 +96,9 @@ if __name__ == "__main__":
     
     # NEUE ERWEITERTE VISUALISIERUNGEN
     print("📈 Generating extended visualizations...")
-    visualizer.visualize_risk_statistics(risk_stats)
+    visualizer.visualize_risk_statistics(risk_stats, output_path=output_dir / "colic_risk_factors_synth_data.png",
+    title="Colic Risk Factors"
+    )
     
     # Zusätzliche spezifische Visualisierungen
     if 'gender_analysis' in risk_stats:
@@ -116,4 +122,10 @@ if __name__ == "__main__":
             title="Age Group Distribution in Colic Cases"
         )
 
+    # Modell initialisieren und trainieren  
+    model = ColicClassifier()
+    model.train(df)
+
+    # Feature-Importance anzeigen
+    print(model.feature_importance())
     print("🎉 Extended risk factor analysis complete!")
