@@ -139,31 +139,31 @@ class RiskFactorAnalyzer:
         # Basis-Statistiken 
         stats = {
             'age_most_common': {
-                'measures of central tendency': risk_results['age_most_common'],
+                'measures_of_central_tendency': risk_results['age_most_common'],
                 'percentage': (risk_results['age_most_common_count'] / total_colic) * 100 if total_colic else 0,
                 'description': 'Altersbedingte Risikofaktoren',
                 'count': risk_results['age_most_common_count']
             },
             'temp_max_most_common': {
-                'measures of central tendency': risk_results['temp_max_mean'],
+                'measures_of_central_tendency': risk_results['temp_max_mean'],
                 'percentage': (risk_results['temp_max_mean'] / total_colic) * 100 if total_colic else 0,
                 'description': 'Risikofaktoren bei hohen Temperaturen',
                 'count': risk_results.get('temp_max_count', 0)
             },
             'temp_min_most_common': {
-                'measures of central tendency': risk_results['temp_min_mean'],
+                'measures_of_central_tendency': risk_results['temp_min_mean'],
                 'percentage': (risk_results['temp_min_mean'] / total_colic) * 100 if total_colic else 0,
                 'description': 'Risikofaktoren bei niedrigen Temperaturen',
                 'count': risk_results.get('temp_min_count', 0)
             },
             'precipitation_most_common': {
-                'measures of central tendency': risk_results['precipitation_mean'],
+                'measures_of_central_tendency': risk_results['precipitation_mean'],
                 'percentage': (risk_results['precipitation_mean'] / total_colic) * 100 if total_colic else 0,
                 'description': 'Risikofaktoren bei Niederschlag',
                 'count': risk_results.get('precipitation_count', 0)
             },
             'feed_counts': {
-                'measures of central tendency': risk_results['most_common_feed'],
+                'measures_of_central_tendency': risk_results['most_common_feed'],
                 'percentage': (risk_results['feed_counts'] / total_colic) * 100 if total_colic else 0,
                 'description': 'Fütterungsbedingte Risikofaktoren',
                 'count': risk_results['feed_counts']
