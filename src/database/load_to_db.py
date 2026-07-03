@@ -135,7 +135,8 @@ class DatabaseLoader:
                     weather_keywords=row.get("weather_keywords"),
                     feed_keywords=row.get("feed_keywords"),
                     weather_count=row.get("weather_count", 0),
-                    feed_count=row.get("feed_count", 0)
+                    feed_count=row.get("feed_count", 0),
+                    is_synthetic=row.get("is_synthetic")
                 )
                 db.session.add(task)
                 inserted += 1
@@ -176,7 +177,8 @@ class DatabaseLoader:
                     weather_tmax=row.get("weather_tmax", None),
                     weather_tmin=row.get("weather_tmin", None),
                     weather_precip=row.get("weather_precip", None),
-                    horse_keeping=row.get("horse_keeping", None)
+                    horse_keeping=row.get("horse_keeping", None),
+                    is_synthetic=row.get("is_synthetic")
                 )
                 db.session.add(task)
                 inserted += 1

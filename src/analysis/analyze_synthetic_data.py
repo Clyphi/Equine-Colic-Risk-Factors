@@ -21,7 +21,8 @@ from src.statistics.risk_factor_analysis import RiskFactorAnalyzer
 from src.visualization.visualizer import FeatureVisualizer
 from src.database.data_loader import SyntheticDataLoader
 from src.models.colic_classifier import ColicClassifier
-from src.models.colic_nn import ColicNN
+from src.models.colic_nn import ColicNNTrainer
+
 
 
 if __name__ == "__main__":
@@ -118,15 +119,15 @@ if __name__ == "__main__":
 
     # Modelle initialisieren und trainieren  
     # 1. CatBoost 
-    catboost_classifier = ColicClassifier(model_type='catboost')
+    catboost_classifier = ColicClassifier(model_type='catboost', include_num_features=True)
     catboost_classifier.train(df)
 
     # 2. XGBoost 
-    xgboost_classifier = ColicClassifier(model_type='xgboost')
+    xgboost_classifier = ColicClassifier(model_type='xgboost', include_num_features=True)
     xgboost_classifier.train(df)
 
     # 3. Random Forest 
-    rf_classifier = ColicClassifier(model_type='random_forest')
+    rf_classifier = ColicClassifier(model_type='random_forest', include_num_features=True)
     rf_classifier.train(df)
 
     # Feature Importance vergleichen
@@ -138,5 +139,12 @@ if __name__ == "__main__":
     
     print("Random Forest Feature Importance:")
     print(rf_classifier.feature_importance().head())
+    
+    # NN-Modell initialisieren und trainieren  
+    # 1. NN 
+    trainer = ColicNNTrainer(hidden_dim=64, include_num_features=True)
+    trainer.train(df, epochs=100, lr=0.001)
+    preds = trainer.predict(df)
+
     
     print("🎉 Extended risk factor analysis complete!")

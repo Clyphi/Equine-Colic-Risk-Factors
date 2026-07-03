@@ -138,15 +138,74 @@ python -c "import pandas, numpy, torch, matplotlib, seaborn; print('Alle Kernpak
 
 ## 🔮 Geplante Erweiterungen
 
--   **Machine Learning Modelle**:
-    -   `src/ml/ml_experiments.py` für erste Tests (z. B. Logistic
-        Regression, Random Forest).\
-    -   Später Aufteilung in Trainings-, Validierungs- und Testsets.\
--   **Zeitreihenanalyse**: Untersuchung saisonaler Muster (z. B. Wetter,
-    Futterwechsel).\
--   **Netzwerkanalyse**: Beziehungen zwischen Risikofaktoren.\
--   **Deployment**: Interaktives Dashboard (Flask/Streamlit).
+### 🧠 Machine Learning Modelle (aktualisiert)
 
+- **`src/models/colic_classifier.py`**  
+  Enthält klassische Machine-Learning-Modelle (Random Forest, XGBoost, CatBoost) zur Klassifikation von Koliktypen basierend auf synthetischen Risikofaktoren.  
+
+- **`src/models/colic_nn.py`**  
+  Feedforward-Neural-Network zur Untersuchung nichtlinearer Zusammenhänge zwischen Futter, Haltung, Alter und Koliktyp.  
+
+- **Zukünftig geplant:**  
+  - Vergleich der Modelle mit erweiterten Feature-Sets (z. B. Wetter, Trainingsintensität)  
+  - Hyperparameter-Optimierung (z. B. mit Optuna)  
+  - Evaluierung mit Cross-Validation  
+
+---
+
+### 📊 Modellbewertung und Erklärbarkeit
+
+- Erweiterung der Modellreports (Precision, Recall, F1-Score pro Koliktyp)  
+- Visualisierung der Feature-Importances (z. B. mit SHAP oder Permutation Importance)  
+- Robustheitsanalysen auf synthetischen **und**, sofern verfügbar, realen Daten  
+
+---
+
+### 🌦️ Zeitreihenanalyse
+
+- Untersuchung saisonaler Muster (Wintermonate, Weidezeit, Temperaturverläufe)  
+- Korrelation von Wetterdaten (Temperatur, Niederschlag) mit Koliktypen  
+
+---
+
+### 🕸️ Netzwerkanalyse
+
+- Ermittlung von Beziehungen zwischen Risikofaktoren (z. B. Alter ↔ Haltung ↔ Futter)  
+- Visualisierung als Graph (z. B. mit NetworkX oder Gephi-kompatiblem Export)  
+
+---
+
+### 🚀 Deployment
+
+- Entwicklung eines interaktiven Dashboards (z. B. mit **Streamlit** oder **Dash**)  
+  zur Visualisierung von Risikofaktoren, Modellvorhersagen und Feature-Importances  
+- Optional: API-Endpunkte für Modellabfragen (`/predict`)  
+
+---
+
+------------------------------------------------------------------------
+
+# Daten & Limitierungen
+
+## Herkunft der Daten
+Für diese Analyse wurden primär synthetische Datensätze verwendet, die mit `src/preprocessing/src/preprocessing/synthetic_data_pipeline.py` erzeugt wurden. Ziel war es, plausible Kausalbeziehungen zwischen Alter, Fütterung, Haltungsform und Koliktyp zu simulieren, damit Modelle und Visualisierungen entwickelt werden können.
+
+Die Generierung folgt regelbasierten Heuristiken (Alter → Impaction, Silage+Stall → Displacement, Fresh Grass → Gas, usw.). Die Regeln sind im Generator kommentiert und bewusst konservativ gehalten.
+
+## Wichtige Einschränkungen
+- **Synthetische Daten sind kein Ersatz für Echtdaten.** Modelle, die ausschließlich an synthetischen Fällen trainiert wurden, können reale Muster nicht zuverlässig vorhersagen.
+- **Bias und Vereinfachung:** Die Regeln im Generator vereinfachen komplexe klinische Zusammenhänge. Das bedeutet: gewisse Feature-Kombinationen sind überrepräsentiert oder fehlen vollständig.
+- **Klassenungleichgewicht:** Einige Koliktypen (z. B. `torsion`) treten selten auf — das führt zu niedrigen Recall/F1 für diese Klassen in allen getesteten Modellen.
+- **Mögliche Überanpassung:** Modelle wie CatBoost oder NN können vermeintlich gute Scores auf synthetischen Daten erzielen, ohne in realen Szenarien nützliche Vorhersagen zu liefern.
+
+## Reproduzierbarkeit
+- Seed und Generator-Parameter sind in `create_synthetic_data.py` einstellbar. Bitte immer denselben Seed verwenden, wenn Ergebnisse reproduziert werden sollen.
+- Synthetische Daten sind mit dem Feld `is_synthetic=True` gekennzeichnet; beim Training auf Mixed-Datasets sollte diese Spalte berücksichtigt werden (z. B. für Domain-Split oder als Feature).
+
+## Beobachtete Ergebnisse (Kurzfassung)
+- Mehrere Modelle (CatBoost, XGBoost, RandomForest, Feed-Forward NN) wurden evaluiert.
+- Mit ~2k synthetischen Fällen ergibt sich eine Test-Accuracy von ~0.37–0.40; gewichtete Feature-Importances zeigen `feed_main`, `horse_keeping` und `age_group` als stärkste Prädiktoren.
+- Fazit: Mit den aktuellen synthetischen Daten sind die Klassen nicht hinreichend trennbar — für robuste Vorhersagen werden entweder realere, reichhaltigere Daten oder gezielt designte synthetische Datensätze (mehr Variation und weniger Rauschen) benötigt.
 ------------------------------------------------------------------------
 
 ## 👩‍💻 Autor

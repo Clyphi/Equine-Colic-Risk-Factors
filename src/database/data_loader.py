@@ -12,12 +12,19 @@ from abc import ABC, abstractmethod
 from .create_db import app, db, Task
 
 class BaseDataLoader(ABC):
-    def __init__(self, model):
+    def __init__(self, model, synthetic_only=False, real_only=False):
         self.model = model
+        self.synthetic_only = synthetic_only
+        self.real_only = real_only
 
     def _query_all(self):
         with app.app_context():
-            return self.model.query.all()
+            query = self.model.query
+            if self.synthetic_only:
+                query = query.filter_by(is_synthetic=True)
+            elif self.real_only:
+                query = query.filter_by(is_synthetic=False)
+            return query.all()
 
     @abstractmethod
     def load_data_from_db(self) -> pd.DataFrame:
@@ -26,7 +33,7 @@ class BaseDataLoader(ABC):
 
 class RedditProcessedDataLoader(BaseDataLoader):
     def __init__(self):
-        super().__init__(Task)
+        super().__init__(Task, real_only=True)
 
     def load_data_from_db(self) -> pd.DataFrame:
         tasks = self._query_all()
@@ -48,7 +55,7 @@ class RedditProcessedDataLoader(BaseDataLoader):
 
 class SyntheticDataLoader(BaseDataLoader):
     def __init__(self):
-        super().__init__(Task)
+        super().__init__(Task, synthetic_only=True)
 
     def load_data_from_db(self) -> pd.DataFrame:
         cases = self._query_all()

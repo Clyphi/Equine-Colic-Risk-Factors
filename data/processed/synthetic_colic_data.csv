@@ -1,0 +1,501 @@
+date,location,horse_age,horse_gender,colic_keywords,weather_keywords,feed_keywords,weather_count,feed_count
+2021-06-29,Nuremberg,6,female,,,,0,0
+2022-04-11,Nuremberg,30,female,,,,0,0
+2021-08-13,Munich,5,male,"gas, sand",,,0,0
+2023-10-13,Berlin,29,gelding,"spasmodic, torsion",,,0,0
+2023-03-29,Cologne,20,male,gas,,,0,0
+2023-05-02,Nuremberg,26,male,,,,0,0
+2020-03-19,Nuremberg,21,female,"displacement, torsion",,,0,0
+2023-04-27,Hamburg,1,gelding,"gas, impaction",,,0,0
+2022-12-06,Stuttgart,17,male,impaction,,,0,0
+2021-04-07,Cologne,15,male,impaction,,,0,0
+2023-06-22,Leipzig,23,gelding,spasmodic,,,0,0
+2022-11-08,Munich,30,gelding,displacement,,,0,0
+2020-11-25,Nuremberg,21,male,gas,,,0,0
+2021-10-20,Cologne,5,gelding,spasmodic,,,0,0
+2020-08-10,Hamburg,26,male,,,,0,0
+2020-07-04,Hanover,25,gelding,,,,0,0
+2022-10-08,Nuremberg,4,female,spasmodic,,,0,0
+2020-10-13,Cologne,16,gelding,"gas, impaction",,,0,0
+2020-05-05,Dresden,14,female,"impaction, spasmodic",,,0,0
+2020-02-06,Leipzig,17,gelding,,,,0,0
+2022-03-05,Cologne,2,male,,,,0,0
+2020-08-06,Nuremberg,19,gelding,,,,0,0
+2020-10-20,Hamburg,2,gelding,,,,0,0
+2020-10-09,Leipzig,24,male,,,,0,0
+2022-09-07,Dresden,29,male,sand,,,0,0
+2022-11-11,Cologne,9,female,sand,,,0,0
+2022-08-22,Nuremberg,14,male,displacement,,,0,0
+2023-10-29,Stuttgart,9,female,displacement,,,0,0
+2020-08-03,Stuttgart,9,male,impaction,,,0,0
+2021-04-23,Nuremberg,29,male,,,,0,0
+2021-10-20,Munich,21,gelding,,,,0,0
+2022-04-16,Stuttgart,19,gelding,,,,0,0
+2021-01-09,Munich,14,gelding,"displacement, impaction",,,0,0
+2022-03-27,Cologne,11,male,spasmodic,,,0,0
+2023-11-07,Leipzig,1,female,spasmodic,,,0,0
+2020-11-27,Berlin,22,female,,,,0,0
+2020-02-15,Hamburg,15,female,torsion,,,0,0
+2020-03-07,Hamburg,9,female,spasmodic,,,0,0
+2021-01-10,Cologne,21,male,displacement,,,0,0
+2022-04-17,Dresden,4,male,,,,0,0
+2022-11-14,Dresden,9,gelding,sand,,,0,0
+2022-12-27,Dresden,25,gelding,displacement,,,0,0
+2020-09-18,Frankfurt,25,gelding,"gas, spasmodic",,,0,0
+2021-05-11,Munich,30,gelding,displacement,,,0,0
+2021-02-27,Frankfurt,10,female,displacement,,,0,0
+2020-02-10,Hanover,17,female,,,,0,0
+2023-04-02,Hamburg,23,gelding,,,,0,0
+2021-01-30,Berlin,22,gelding,"displacement, sand",,,0,0
+2023-09-14,Cologne,25,male,spasmodic,,,0,0
+2022-05-22,Stuttgart,17,male,spasmodic,,,0,0
+2020-07-05,Nuremberg,13,gelding,,,,0,0
+2022-03-24,Hanover,19,gelding,displacement,,,0,0
+2023-11-30,Cologne,4,gelding,displacement,,,0,0
+2022-01-16,Hamburg,4,gelding,,,,0,0
+2021-01-30,Hanover,30,male,spasmodic,,,0,0
+2022-04-21,Hanover,5,gelding,spasmodic,,,0,0
+2023-07-20,Munich,12,gelding,gas,,,0,0
+2021-03-04,Munich,14,gelding,,,,0,0
+2020-11-27,Berlin,18,female,sand,,,0,0
+2021-10-27,Leipzig,5,female,,,,0,0
+2023-08-13,Frankfurt,7,female,displacement,,,0,0
+2021-12-30,Berlin,23,gelding,"impaction, spasmodic",,,0,0
+2022-07-02,Stuttgart,15,gelding,,,,0,0
+2023-05-28,Stuttgart,7,female,sand,,,0,0
+2020-02-16,Frankfurt,19,female,,,,0,0
+2023-02-24,Dresden,3,male,torsion,,,0,0
+2020-10-14,Cologne,4,male,,,,0,0
+2020-09-25,Hamburg,30,male,spasmodic,,,0,0
+2023-07-16,Hamburg,10,gelding,spasmodic,,,0,0
+2022-10-02,Munich,22,female,impaction,,,0,0
+2022-08-14,Frankfurt,27,female,"displacement, spasmodic",,,0,0
+2021-07-13,Leipzig,24,female,displacement,,,0,0
+2021-12-12,Hanover,10,gelding,gas,,,0,0
+2021-08-29,Munich,8,male,,,,0,0
+2023-12-23,Cologne,7,female,impaction,,,0,0
+2021-06-29,Munich,4,gelding,,,,0,0
+2021-03-11,Leipzig,14,gelding,"gas, impaction",,,0,0
+2022-08-02,Hanover,1,male,spasmodic,,,0,0
+2021-07-23,Hamburg,19,gelding,displacement,,,0,0
+2023-10-09,Munich,23,female,spasmodic,,,0,0
+2021-02-06,Nuremberg,8,gelding,displacement,,,0,0
+2021-09-28,Nuremberg,16,gelding,impaction,,,0,0
+2020-07-22,Leipzig,22,male,spasmodic,,,0,0
+2020-03-22,Cologne,27,female,,,,0,0
+2023-06-09,Munich,2,male,"impaction, torsion",,,0,0
+2022-11-06,Stuttgart,17,male,"sand, torsion",,,0,0
+2022-09-18,Nuremberg,26,male,displacement,,,0,0
+2021-11-23,Cologne,14,male,,,,0,0
+2020-10-09,Berlin,10,female,impaction,,,0,0
+2023-12-03,Hamburg,27,gelding,,,,0,0
+2021-07-29,Hamburg,21,female,torsion,,,0,0
+2022-06-15,Stuttgart,9,male,gas,,,0,0
+2021-10-21,Dresden,23,gelding,,,,0,0
+2021-05-25,Nuremberg,2,gelding,,,,0,0
+2023-06-02,Hamburg,15,male,,,,0,0
+2022-10-23,Hamburg,16,female,,,,0,0
+2022-05-24,Nuremberg,2,female,displacement,,,0,0
+2020-06-28,Frankfurt,2,gelding,spasmodic,,,0,0
+2022-11-29,Frankfurt,6,female,impaction,,,0,0
+2021-07-02,Hamburg,24,female,,,,0,0
+2022-02-18,Leipzig,28,gelding,sand,,,0,0
+2023-12-07,Frankfurt,12,male,"displacement, spasmodic",,,0,0
+2020-11-28,Nuremberg,29,gelding,,,,0,0
+2020-07-28,Stuttgart,19,male,"displacement, impaction",,,0,0
+2022-05-14,Leipzig,20,female,"impaction, spasmodic",,,0,0
+2022-07-10,Hamburg,18,female,spasmodic,,,0,0
+2020-10-06,Hamburg,2,gelding,,,,0,0
+2023-01-23,Stuttgart,16,male,,,,0,0
+2020-11-14,Munich,12,male,"displacement, impaction",,,0,0
+2021-03-07,Dresden,6,female,displacement,,,0,0
+2020-11-23,Hanover,15,male,,,,0,0
+2023-05-22,Nuremberg,5,male,,,,0,0
+2020-06-13,Leipzig,3,male,,,,0,0
+2021-10-28,Hanover,8,female,,,,0,0
+2021-09-24,Berlin,22,gelding,impaction,,,0,0
+2023-11-10,Munich,7,male,,,,0,0
+2022-05-28,Dresden,20,female,impaction,,,0,0
+2022-05-20,Dresden,18,female,spasmodic,,,0,0
+2023-03-24,Nuremberg,21,gelding,"impaction, sand",,,0,0
+2023-01-13,Stuttgart,13,female,spasmodic,,,0,0
+2020-10-12,Frankfurt,26,male,spasmodic,,,0,0
+2023-06-29,Berlin,12,gelding,spasmodic,,,0,0
+2023-12-29,Frankfurt,25,gelding,impaction,,,0,0
+2023-08-22,Berlin,25,female,displacement,,,0,0
+2022-06-06,Berlin,13,female,,,,0,0
+2022-05-20,Dresden,6,gelding,spasmodic,,,0,0
+2022-05-14,Hamburg,14,female,spasmodic,,,0,0
+2020-09-19,Leipzig,22,gelding,gas,,,0,0
+2021-09-12,Cologne,14,gelding,"displacement, impaction",,,0,0
+2021-06-02,Munich,30,gelding,gas,,,0,0
+2021-04-25,Nuremberg,17,female,displacement,,,0,0
+2020-05-15,Cologne,8,gelding,,,,0,0
+2020-09-29,Nuremberg,22,female,,,,0,0
+2020-12-18,Cologne,2,male,"gas, torsion",,,0,0
+2023-05-17,Berlin,16,gelding,gas,,,0,0
+2020-06-17,Munich,29,female,impaction,,,0,0
+2021-07-22,Dresden,16,female,,,,0,0
+2021-06-30,Hamburg,7,gelding,"gas, impaction",,,0,0
+2022-05-18,Cologne,16,gelding,,,,0,0
+2022-03-29,Dresden,25,male,gas,,,0,0
+2021-09-16,Cologne,28,male,,,,0,0
+2021-07-04,Stuttgart,29,male,,,,0,0
+2021-08-03,Munich,5,female,spasmodic,,,0,0
+2021-03-31,Cologne,7,female,,,,0,0
+2020-07-03,Leipzig,14,gelding,,,,0,0
+2022-11-13,Hanover,20,male,"displacement, impaction",,,0,0
+2021-04-03,Cologne,3,female,,,,0,0
+2020-07-25,Frankfurt,22,gelding,"displacement, sand",,,0,0
+2021-06-02,Hamburg,19,male,spasmodic,,,0,0
+2023-08-30,Leipzig,15,female,,,,0,0
+2022-02-28,Cologne,12,female,"sand, spasmodic",,,0,0
+2021-01-11,Cologne,23,gelding,gas,,,0,0
+2020-02-22,Leipzig,24,male,impaction,,,0,0
+2023-01-25,Berlin,28,male,"impaction, spasmodic",,,0,0
+2021-10-30,Hanover,10,male,spasmodic,,,0,0
+2023-03-13,Stuttgart,5,male,,,,0,0
+2023-12-31,Frankfurt,1,male,,,,0,0
+2023-05-22,Cologne,22,female,gas,,,0,0
+2021-07-16,Munich,8,male,displacement,,,0,0
+2022-07-13,Leipzig,1,gelding,torsion,,,0,0
+2022-06-05,Munich,14,female,,,,0,0
+2020-12-14,Frankfurt,19,male,spasmodic,,,0,0
+2022-12-05,Stuttgart,17,gelding,"impaction, torsion",,,0,0
+2023-09-13,Munich,19,female,displacement,,,0,0
+2022-12-03,Berlin,29,gelding,displacement,,,0,0
+2022-05-26,Stuttgart,17,male,impaction,,,0,0
+2021-03-03,Leipzig,14,gelding,sand,,,0,0
+2023-03-05,Hanover,9,female,sand,,,0,0
+2021-10-21,Stuttgart,5,gelding,sand,,,0,0
+2020-09-16,Stuttgart,1,female,spasmodic,,,0,0
+2021-02-13,Stuttgart,18,male,"spasmodic, torsion",,,0,0
+2023-07-17,Berlin,24,gelding,displacement,,,0,0
+2022-05-18,Berlin,12,male,,,,0,0
+2022-05-26,Hamburg,11,gelding,sand,,,0,0
+2021-05-14,Munich,22,female,,,,0,0
+2021-05-23,Hanover,21,female,spasmodic,,,0,0
+2022-03-17,Nuremberg,28,female,,,,0,0
+2020-06-19,Frankfurt,16,gelding,,,,0,0
+2020-04-01,Berlin,3,male,impaction,,,0,0
+2020-12-06,Nuremberg,21,female,spasmodic,,,0,0
+2022-11-22,Berlin,9,male,spasmodic,,,0,0
+2021-03-06,Nuremberg,30,male,"displacement, sand",,,0,0
+2021-10-16,Berlin,4,female,torsion,,,0,0
+2021-01-23,Hamburg,21,male,impaction,,,0,0
+2020-04-15,Munich,18,gelding,"spasmodic, torsion",,,0,0
+2023-09-03,Leipzig,1,male,gas,,,0,0
+2020-11-17,Cologne,25,female,spasmodic,,,0,0
+2023-11-09,Nuremberg,4,male,torsion,,,0,0
+2023-10-19,Hanover,17,female,,,,0,0
+2021-04-10,Stuttgart,5,gelding,,,,0,0
+2021-09-22,Berlin,16,male,displacement,,,0,0
+2023-07-07,Leipzig,21,gelding,spasmodic,,,0,0
+2020-10-24,Stuttgart,28,gelding,"displacement, impaction",,,0,0
+2023-08-09,Stuttgart,10,gelding,,,,0,0
+2020-04-29,Berlin,2,female,sand,,,0,0
+2023-04-14,Hamburg,30,female,displacement,,,0,0
+2023-08-14,Hamburg,21,gelding,,,,0,0
+2023-02-25,Nuremberg,17,male,torsion,,,0,0
+2020-09-29,Dresden,29,female,,,,0,0
+2021-08-23,Dresden,25,female,,,,0,0
+2022-09-13,Frankfurt,2,female,sand,,,0,0
+2023-01-21,Hanover,23,male,,,,0,0
+2023-03-31,Stuttgart,11,male,,,,0,0
+2022-01-28,Stuttgart,23,female,impaction,,,0,0
+2023-12-26,Leipzig,30,female,,,,0,0
+2020-01-13,Dresden,5,female,"impaction, spasmodic",,,0,0
+2020-05-31,Stuttgart,17,gelding,displacement,,,0,0
+2021-07-02,Cologne,13,female,spasmodic,,,0,0
+2022-10-24,Frankfurt,12,gelding,sand,,,0,0
+2023-05-04,Hanover,17,male,spasmodic,,,0,0
+2021-01-26,Dresden,19,gelding,displacement,,,0,0
+2021-08-19,Dresden,20,gelding,,,,0,0
+2020-12-24,Nuremberg,10,gelding,"displacement, spasmodic",,,0,0
+2020-01-04,Cologne,26,female,displacement,,,0,0
+2022-06-29,Hanover,6,female,,,,0,0
+2021-02-10,Dresden,21,male,,,,0,0
+2022-11-03,Hamburg,26,gelding,impaction,,,0,0
+2021-04-23,Hamburg,12,female,,,,0,0
+2023-05-23,Hanover,5,female,gas,,,0,0
+2021-07-31,Leipzig,30,female,,,,0,0
+2020-12-15,Hanover,29,gelding,"gas, spasmodic",,,0,0
+2020-10-22,Stuttgart,20,male,,,,0,0
+2022-06-23,Leipzig,16,female,sand,,,0,0
+2023-09-09,Leipzig,15,male,"displacement, sand",,,0,0
+2021-11-15,Dresden,21,gelding,gas,,,0,0
+2020-12-11,Leipzig,22,male,"impaction, spasmodic",,,0,0
+2020-10-29,Munich,9,male,gas,,,0,0
+2020-06-10,Hamburg,15,gelding,,,,0,0
+2023-07-09,Berlin,19,gelding,spasmodic,,,0,0
+2020-07-21,Frankfurt,29,male,"displacement, sand",,,0,0
+2023-10-15,Stuttgart,13,female,"impaction, torsion",,,0,0
+2020-07-19,Leipzig,26,male,,,,0,0
+2022-12-10,Leipzig,9,female,spasmodic,,,0,0
+2023-10-16,Frankfurt,22,male,spasmodic,,,0,0
+2021-09-02,Cologne,15,gelding,,,,0,0
+2020-11-11,Stuttgart,3,male,spasmodic,,,0,0
+2020-03-04,Munich,5,male,gas,,,0,0
+2020-02-15,Hanover,4,gelding,impaction,,,0,0
+2020-10-20,Stuttgart,29,female,,,,0,0
+2023-12-18,Stuttgart,26,female,,,,0,0
+2023-12-24,Berlin,25,male,,,,0,0
+2020-06-21,Leipzig,27,male,,,,0,0
+2021-03-25,Stuttgart,28,female,,,,0,0
+2021-06-15,Hanover,7,male,"gas, impaction",,,0,0
+2021-05-29,Berlin,8,female,,,,0,0
+2021-08-19,Hanover,23,male,"impaction, sand",,,0,0
+2020-04-30,Frankfurt,3,female,,,,0,0
+2021-01-08,Frankfurt,2,male,,,,0,0
+2023-07-10,Munich,15,female,sand,,,0,0
+2022-05-06,Stuttgart,4,gelding,"displacement, impaction",,,0,0
+2020-07-28,Cologne,29,male,spasmodic,,,0,0
+2022-06-15,Hamburg,11,gelding,,,,0,0
+2020-09-30,Hamburg,12,male,,,,0,0
+2023-03-08,Berlin,27,female,,,,0,0
+2021-04-05,Stuttgart,21,female,"impaction, torsion",,,0,0
+2020-05-24,Hamburg,28,male,displacement,,,0,0
+2021-01-05,Cologne,8,gelding,displacement,,,0,0
+2020-01-17,Dresden,1,male,,,,0,0
+2023-11-03,Hanover,9,gelding,,,,0,0
+2023-03-06,Dresden,2,female,,,,0,0
+2022-01-28,Dresden,30,female,impaction,,,0,0
+2023-04-20,Frankfurt,29,gelding,,,,0,0
+2021-01-06,Hanover,14,gelding,,,,0,0
+2022-09-21,Munich,29,male,"gas, impaction",,,0,0
+2022-05-30,Hamburg,1,gelding,,,,0,0
+2023-06-24,Cologne,28,male,,,,0,0
+2023-08-11,Berlin,12,female,,,,0,0
+2022-12-23,Hanover,25,female,,,,0,0
+2020-12-24,Dresden,2,gelding,gas,,,0,0
+2023-12-27,Cologne,12,male,"impaction, spasmodic",,,0,0
+2023-07-04,Stuttgart,3,female,sand,,,0,0
+2023-02-17,Dresden,26,gelding,,,,0,0
+2021-11-29,Leipzig,28,male,,,,0,0
+2021-06-26,Hamburg,29,gelding,impaction,,,0,0
+2022-04-04,Stuttgart,17,gelding,gas,,,0,0
+2023-06-07,Berlin,14,male,displacement,,,0,0
+2023-07-30,Hanover,4,gelding,impaction,,,0,0
+2021-11-19,Munich,20,gelding,spasmodic,,,0,0
+2020-03-05,Cologne,30,female,sand,,,0,0
+2022-01-09,Cologne,14,gelding,gas,,,0,0
+2020-03-26,Leipzig,21,female,impaction,,,0,0
+2022-05-03,Cologne,2,gelding,torsion,,,0,0
+2020-10-13,Nuremberg,18,male,sand,,,0,0
+2022-02-10,Frankfurt,27,gelding,,,,0,0
+2020-09-10,Cologne,20,female,,,,0,0
+2023-09-29,Hamburg,18,female,,,,0,0
+2020-11-13,Leipzig,21,gelding,"impaction, torsion",,,0,0
+2020-06-25,Frankfurt,6,gelding,,,,0,0
+2023-11-09,Frankfurt,18,gelding,gas,,,0,0
+2022-03-27,Hamburg,26,female,,,,0,0
+2021-08-12,Hanover,19,male,,,,0,0
+2023-10-15,Hanover,23,male,gas,,,0,0
+2022-12-16,Hanover,21,female,gas,,,0,0
+2021-11-25,Munich,4,female,,,,0,0
+2023-07-06,Dresden,19,gelding,spasmodic,,,0,0
+2020-05-17,Frankfurt,30,male,,,,0,0
+2021-12-30,Frankfurt,20,gelding,displacement,,,0,0
+2022-12-26,Nuremberg,21,female,,,,0,0
+2020-11-02,Stuttgart,3,female,"sand, torsion",,,0,0
+2022-09-22,Nuremberg,20,gelding,,,,0,0
+2022-10-03,Hanover,21,male,impaction,,,0,0
+2022-11-27,Leipzig,29,male,spasmodic,,,0,0
+2021-11-17,Nuremberg,15,male,gas,,,0,0
+2022-01-15,Frankfurt,3,gelding,impaction,,,0,0
+2023-06-14,Nuremberg,7,male,,,,0,0
+2023-12-21,Stuttgart,30,male,"impaction, sand",,,0,0
+2023-06-08,Cologne,25,gelding,gas,,,0,0
+2023-03-26,Berlin,21,male,,,,0,0
+2023-08-11,Stuttgart,21,gelding,"spasmodic, torsion",,,0,0
+2023-10-29,Hamburg,15,male,sand,,,0,0
+2020-12-04,Leipzig,6,female,spasmodic,,,0,0
+2022-02-21,Munich,12,gelding,impaction,,,0,0
+2020-06-08,Nuremberg,8,male,,,,0,0
+2022-01-07,Berlin,10,male,impaction,,,0,0
+2022-05-07,Nuremberg,5,female,spasmodic,,,0,0
+2023-03-16,Berlin,4,male,torsion,,,0,0
+2023-09-20,Nuremberg,20,male,"displacement, torsion",,,0,0
+2022-05-11,Hanover,27,male,spasmodic,,,0,0
+2023-06-06,Frankfurt,9,female,torsion,,,0,0
+2023-07-31,Berlin,2,female,spasmodic,,,0,0
+2022-03-26,Hamburg,23,gelding,"displacement, torsion",,,0,0
+2020-02-04,Cologne,9,gelding,spasmodic,,,0,0
+2021-02-02,Stuttgart,22,gelding,impaction,,,0,0
+2022-04-26,Leipzig,23,gelding,impaction,,,0,0
+2020-12-14,Hanover,25,male,sand,,,0,0
+2023-11-24,Nuremberg,21,female,torsion,,,0,0
+2021-06-24,Frankfurt,21,gelding,"impaction, spasmodic",,,0,0
+2020-01-12,Frankfurt,20,female,impaction,,,0,0
+2022-08-16,Berlin,28,male,,,,0,0
+2022-01-02,Nuremberg,15,female,"gas, spasmodic",,,0,0
+2023-01-12,Nuremberg,23,gelding,impaction,,,0,0
+2020-08-13,Stuttgart,17,gelding,,,,0,0
+2022-04-14,Frankfurt,9,gelding,,,,0,0
+2023-01-04,Stuttgart,29,male,"spasmodic, torsion",,,0,0
+2023-04-16,Leipzig,26,male,sand,,,0,0
+2022-05-09,Hanover,1,female,,,,0,0
+2020-04-30,Hamburg,28,male,torsion,,,0,0
+2020-11-18,Hamburg,20,female,torsion,,,0,0
+2021-07-23,Leipzig,11,gelding,gas,,,0,0
+2021-06-24,Cologne,4,gelding,gas,,,0,0
+2023-03-07,Stuttgart,19,male,sand,,,0,0
+2020-04-30,Berlin,11,female,sand,,,0,0
+2020-07-25,Dresden,13,female,,,,0,0
+2021-02-05,Hanover,6,female,,,,0,0
+2023-02-01,Nuremberg,21,gelding,,,,0,0
+2022-12-11,Dresden,20,gelding,gas,,,0,0
+2020-08-04,Leipzig,13,gelding,"gas, impaction",,,0,0
+2021-03-12,Frankfurt,24,gelding,"impaction, spasmodic",,,0,0
+2022-08-09,Hamburg,15,female,,,,0,0
+2021-07-02,Berlin,27,male,sand,,,0,0
+2021-02-05,Dresden,13,male,gas,,,0,0
+2022-03-30,Nuremberg,9,male,impaction,,,0,0
+2021-09-20,Leipzig,1,male,,,,0,0
+2023-09-23,Cologne,9,female,displacement,,,0,0
+2023-01-25,Frankfurt,10,gelding,spasmodic,,,0,0
+2023-08-22,Hanover,10,male,,,,0,0
+2022-03-20,Leipzig,10,gelding,gas,,,0,0
+2020-06-07,Hamburg,22,gelding,gas,,,0,0
+2022-01-23,Berlin,13,gelding,gas,,,0,0
+2020-08-14,Hanover,12,female,displacement,,,0,0
+2023-09-18,Munich,27,female,gas,,,0,0
+2022-04-28,Berlin,26,gelding,,,,0,0
+2020-07-11,Nuremberg,2,male,"impaction, sand",,,0,0
+2023-08-16,Hamburg,26,female,torsion,,,0,0
+2022-11-29,Hamburg,19,female,"displacement, impaction",,,0,0
+2020-05-20,Frankfurt,2,gelding,displacement,,,0,0
+2022-09-28,Hamburg,8,male,sand,,,0,0
+2020-03-09,Hanover,18,gelding,,,,0,0
+2023-03-10,Cologne,9,gelding,,,,0,0
+2021-07-14,Frankfurt,3,female,torsion,,,0,0
+2020-12-22,Berlin,2,gelding,gas,,,0,0
+2020-09-04,Nuremberg,11,male,impaction,,,0,0
+2020-12-02,Hanover,28,female,,,,0,0
+2020-04-29,Munich,16,gelding,"displacement, impaction",,,0,0
+2023-01-17,Stuttgart,10,gelding,,,,0,0
+2023-12-08,Hamburg,7,male,displacement,,,0,0
+2021-12-03,Leipzig,18,male,"impaction, sand",,,0,0
+2021-08-22,Hamburg,8,female,sand,,,0,0
+2021-05-03,Munich,14,gelding,,,,0,0
+2022-01-09,Berlin,20,male,spasmodic,,,0,0
+2022-08-22,Munich,23,male,spasmodic,,,0,0
+2020-10-25,Hanover,11,male,gas,,,0,0
+2021-06-17,Hanover,27,female,,,,0,0
+2021-09-17,Stuttgart,4,gelding,,,,0,0
+2022-03-16,Cologne,7,female,,,,0,0
+2020-09-01,Leipzig,7,gelding,torsion,,,0,0
+2021-01-03,Stuttgart,18,gelding,impaction,,,0,0
+2021-10-10,Munich,7,male,"spasmodic, torsion",,,0,0
+2021-06-26,Cologne,14,male,,,,0,0
+2023-01-25,Munich,14,male,,,,0,0
+2020-07-20,Berlin,14,female,,,,0,0
+2020-04-22,Leipzig,17,male,,,,0,0
+2020-04-27,Frankfurt,12,female,sand,,,0,0
+2022-12-30,Nuremberg,3,gelding,spasmodic,,,0,0
+2022-01-08,Leipzig,30,female,,,,0,0
+2021-02-22,Munich,20,male,sand,,,0,0
+2020-10-20,Leipzig,27,male,displacement,,,0,0
+2023-11-30,Frankfurt,21,gelding,sand,,,0,0
+2021-08-09,Frankfurt,3,female,,,,0,0
+2021-10-19,Munich,27,gelding,impaction,,,0,0
+2022-08-31,Berlin,28,female,,,,0,0
+2021-11-20,Leipzig,10,female,spasmodic,,,0,0
+2020-12-18,Frankfurt,6,male,impaction,,,0,0
+2022-08-05,Hanover,28,female,"impaction, spasmodic",,,0,0
+2021-04-22,Dresden,8,male,,,,0,0
+2020-08-09,Berlin,7,female,,,,0,0
+2022-08-11,Leipzig,5,gelding,,,,0,0
+2020-07-24,Leipzig,12,male,"gas, torsion",,,0,0
+2022-10-03,Hanover,25,female,spasmodic,,,0,0
+2020-12-23,Hanover,11,female,gas,,,0,0
+2023-11-12,Berlin,22,male,spasmodic,,,0,0
+2023-07-09,Berlin,4,male,,,,0,0
+2020-12-05,Munich,23,female,impaction,,,0,0
+2020-02-28,Leipzig,15,male,"spasmodic, torsion",,,0,0
+2023-09-08,Leipzig,17,gelding,displacement,,,0,0
+2023-04-02,Nuremberg,18,gelding,impaction,,,0,0
+2020-03-19,Munich,25,male,spasmodic,,,0,0
+2020-12-09,Hanover,8,female,,,,0,0
+2022-06-30,Leipzig,16,gelding,,,,0,0
+2023-02-25,Stuttgart,14,female,displacement,,,0,0
+2022-12-19,Leipzig,18,gelding,,,,0,0
+2021-02-10,Stuttgart,17,female,"gas, spasmodic",,,0,0
+2022-07-02,Berlin,16,male,impaction,,,0,0
+2022-06-07,Cologne,2,female,spasmodic,,,0,0
+2023-08-26,Frankfurt,2,male,displacement,,,0,0
+2021-04-08,Hamburg,29,male,impaction,,,0,0
+2023-11-17,Berlin,27,gelding,displacement,,,0,0
+2023-04-25,Leipzig,3,male,,,,0,0
+2021-01-26,Nuremberg,2,female,displacement,,,0,0
+2023-08-24,Stuttgart,22,gelding,,,,0,0
+2021-04-11,Hanover,4,male,displacement,,,0,0
+2020-07-07,Nuremberg,1,female,,,,0,0
+2023-01-21,Frankfurt,28,gelding,spasmodic,,,0,0
+2021-08-27,Berlin,9,male,displacement,,,0,0
+2020-12-27,Leipzig,2,female,,,,0,0
+2021-12-17,Munich,11,female,"displacement, spasmodic",,,0,0
+2020-12-04,Nuremberg,18,male,displacement,,,0,0
+2021-03-31,Leipzig,17,female,gas,,,0,0
+2023-02-06,Leipzig,16,gelding,spasmodic,,,0,0
+2020-09-14,Berlin,6,female,displacement,,,0,0
+2021-01-11,Hamburg,7,gelding,sand,,,0,0
+2023-05-06,Stuttgart,2,female,displacement,,,0,0
+2021-06-22,Hamburg,25,male,,,,0,0
+2023-04-10,Berlin,3,male,torsion,,,0,0
+2023-02-16,Leipzig,9,gelding,gas,,,0,0
+2021-12-29,Dresden,15,male,gas,,,0,0
+2021-07-18,Stuttgart,3,male,"gas, impaction",,,0,0
+2021-02-13,Hanover,13,gelding,"impaction, spasmodic",,,0,0
+2023-07-02,Berlin,29,gelding,spasmodic,,,0,0
+2022-01-29,Nuremberg,29,female,,,,0,0
+2021-12-06,Frankfurt,17,gelding,torsion,,,0,0
+2022-03-30,Munich,3,gelding,gas,,,0,0
+2022-04-11,Hamburg,23,female,,,,0,0
+2023-12-05,Munich,20,male,,,,0,0
+2021-02-20,Hanover,8,gelding,displacement,,,0,0
+2021-11-13,Leipzig,2,gelding,spasmodic,,,0,0
+2020-10-21,Nuremberg,13,male,"spasmodic, torsion",,,0,0
+2022-10-26,Munich,23,female,,,,0,0
+2022-03-31,Cologne,2,female,spasmodic,,,0,0
+2022-02-12,Stuttgart,23,gelding,sand,,,0,0
+2020-11-25,Hamburg,21,female,impaction,,,0,0
+2021-10-20,Hamburg,1,gelding,,,,0,0
+2023-12-09,Hamburg,11,female,,,,0,0
+2020-06-17,Berlin,20,gelding,,,,0,0
+2022-06-17,Hanover,3,male,torsion,,,0,0
+2022-02-10,Nuremberg,30,female,spasmodic,,,0,0
+2020-04-09,Hanover,5,male,displacement,,,0,0
+2020-05-16,Munich,4,female,,,,0,0
+2022-12-12,Hamburg,23,gelding,,,,0,0
+2021-07-09,Stuttgart,7,gelding,,,,0,0
+2023-10-29,Stuttgart,6,gelding,sand,,,0,0
+2020-08-06,Hanover,23,gelding,,,,0,0
+2023-07-08,Stuttgart,2,female,"gas, sand",,,0,0
+2022-01-19,Cologne,23,female,,,,0,0
+2021-01-19,Munich,1,male,gas,,,0,0
+2022-05-02,Dresden,17,gelding,,,,0,0
+2023-03-11,Hamburg,27,male,displacement,,,0,0
+2021-08-22,Berlin,24,female,"displacement, sand",,,0,0
+2022-01-27,Munich,17,female,"impaction, torsion",,,0,0
+2023-08-04,Dresden,25,male,"displacement, gas",,,0,0
+2021-08-13,Leipzig,9,female,gas,,,0,0
+2020-03-26,Berlin,23,female,,,,0,0
+2020-02-03,Frankfurt,5,gelding,displacement,,,0,0
+2022-11-17,Hamburg,26,male,spasmodic,,,0,0
+2023-06-04,Cologne,9,male,,,,0,0
+2021-01-23,Nuremberg,13,gelding,,,,0,0
+2023-01-05,Berlin,20,male,impaction,,,0,0
+2022-05-08,Nuremberg,16,male,,,,0,0
+2023-02-12,Hanover,16,female,,,,0,0
+2020-09-20,Berlin,28,female,impaction,,,0,0
+2023-08-18,Munich,30,gelding,,,,0,0
+2022-07-27,Stuttgart,11,female,gas,,,0,0
+2022-04-04,Hanover,8,female,gas,,,0,0
+2022-02-17,Munich,5,gelding,torsion,,,0,0
+2023-04-27,Munich,4,gelding,spasmodic,,,0,0
+2023-04-23,Hamburg,4,male,spasmodic,,,0,0
+2023-07-08,Cologne,26,gelding,,,,0,0
+2020-02-05,Nuremberg,22,male,displacement,,,0,0
+2022-11-05,Dresden,10,male,,,,0,0
+2023-11-25,Cologne,25,male,spasmodic,,,0,0

@@ -121,6 +121,7 @@ class DataCleaner:
                 'feed_keywords': feed_results,
                 'weather_count': len(weather_results.split(',')) if weather_results else 0,
                 'feed_count': len(feed_results.split(',')) if feed_results else 0
+                'is_synthetic': False
             })
     
         print(f"✅ {len(self.table)} Zeilen bereinigt und bereit für DB-Import")

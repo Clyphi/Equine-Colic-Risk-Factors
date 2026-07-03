@@ -56,6 +56,8 @@ class Task(db.Model):
     weather_tmin = db.Column(db.Float)
     weather_precip = db.Column(db.Float)
     horse_keeping = db.Column(db.String(10), nullable=True) # stable, pasture, paddock
+    is_synthetic = db.Column(db.Boolean, default=False)
+
     
     def to_dict(self):
         return {
@@ -77,7 +79,8 @@ class Task(db.Model):
             "weather_tmax": self.weather_tmax,
             "weather_tmin": self.weather_tmin,
             "weather_precip": self.weather_precip,
-            "horse_keeping": self.horse_keeping
+            "horse_keeping": self.horse_keeping,
+            "is_synthetic": self.is_synthetic
         }
 
     def __repr__(self):
